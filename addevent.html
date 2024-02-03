@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Happenings Add Event</title>
+</head>
+
+<body id="centerbody">
+    <div id="all">
+        <iframe id="callednavigationbar" src="navigationbarpage.php" width="100%" height="60"></iframe>
+        <div class="box"></div>
+        <center>
+            <h1>Adding Event</h1>
+        </center>
+        <div id="upload_flex_div">
+            <div id="form_upload">
+                <form id="formofadd" enctype="multipart/form-data" method="POST" action="createevent.php">
+                    <div class="inputdiv">
+                        <input type="text" class="inputs" name="theeventname" placeholder="." oninput="updateEventName(this.value)" required />
+                        <label for="name" class="labels">Event Name</label>
+                    </div>
+                    <div class="inputdiv">
+                        <input type="text" class="inputs" name="theeventinfo" placeholder="." oninput="updateInfoAboutEvent(this.value)" required/>
+                        <label for="info" class="labels">Info About Event</label>
+                    </div><br>
+                    <p class="texts" style="display: inline;">Event Type</p>
+                    <select onchange="updateEventType()" name="theeventtype">
+                        <option value="online">online</option>
+                        <option value="hybrid">hybrid</option>
+                        <option value="on-campus">on-campus</option>
+                    </select>
+                    <br> <br>
+                    <label for="image-upload" class="texts">Upload poster of your event:</label>
+                    <br>
+                    <br>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="image-upload" name="image" onchange="loadImage(event)" required>
+                        <img src="upload.png" alt="Upload" class="upload-icon">
+                    </div>
+                    <br>
+                    <br>
+                    <label for="event-date" class="texts">Event Date:</label>
+                    <input type="date" id="event-date" name="theeventdate" onchange="updateEventDate()" required><br><br>
+                    <label for="event-time" class="texts">Event Time:</label>
+                    <input type="time" id="event-time" name="theeventtime" onchange="updateEventTime()" required><br><br>
+                    <label for="eventmaxpeople" class="texts">Max no of attendees:</label>
+                    <input type="number" id="eventmaxpeople" name="theeventmaxnbofpeople" required ><br><br>
+                    <button id="buttons" type="submit"> Upload</a></button><br>
+                </form>
+            </div>
+            <div id="show_upload">
+                <div class="event">
+                    <div id="imagesize">
+                        <img class="eventimage" src="default_poster.PNG" alt="POSTER_OF_EVENT" />
+                    </div>
+                    <p class="eventname">EVENT NAME</p>
+                    <div class="eventinfo-container">
+                        <p class="titlesofeventinfo">event type:</p>
+                        <p class="eventtype">online</p>
+                    </div>
+                    <div class="eventinfo-container">
+                        <p class="titlesofeventinfo">info:</p>
+                        <p class="eventinfo">Info About Event </p>
+                    </div>
+                    <div class="eventinfo-container">
+                        <p class="titlesofeventinfo">date & time:</p>
+                        <p class="eventDate">mm/dd/yyyy</p>
+                        <p class="eventinfo">&nbsp;and&nbsp;</p>
+                        <p class="eventTime">hh:mm</p>
+                    </div>
+                    <br>
+                    <button id="join" class="buttomsfilter">join now</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

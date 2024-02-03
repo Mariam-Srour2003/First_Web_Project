@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Happenings Login</title>
+</head>
+
+<body id="centerbody">
+        <div id="all">
+            <iframe id="callednavigationbar" src="navigationbarpage.php" width="100%" height="60"></iframe>
+            <div class="box"></div>
+            <center>
+                <h1 id="hh1">Login</h1>
+            </center>
+            <div id="divLogin">
+                <form id="Login" action="checkuser.php" method="POST">
+                    <div class="inputdiv">
+                        <input type="email" class="inputs" placeholder="." name="email" required/>
+                        <label for="email" class="labels">Email Address</label>
+                    </div>
+                    <div class="inputdiv">
+                        <input type="password" class="inputs" placeholder="." name="password" minlength="8" required />
+                        <label for="pass" class="labels">Password</label>
+                    </div>
+                    forgot password? <a href="forgotpassword.html">get password</a>
+                    <br> <br> <br>
+                    <button id="buttonlogin" type="submit">Login</button>
+                    <br>
+                    Don't have an account yet? <a href="signup.html">Signup</a>
+                    <br>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

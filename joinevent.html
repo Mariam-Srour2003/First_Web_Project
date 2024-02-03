@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Happenings Join Event</title>
+</head>
+
+<body id="centerbody">
+    <div id="all">
+        <iframe id="callednavigationbar" src="navigationbarpage.php" width="100%" height="60"></iframe>
+        <div class="box"></div>
+        <center>
+            <h1 id="hh1">Join Event</h1>
+        </center>
+        <div id="divLogin">
+            <form id="Login" action="joinanevent.php" method="POST">
+                <div class="inputdiv">
+                    <input type="text" class="inputs" placeholder="." name="event_name" required />
+                    <label for="event_name" class="labels">Event Name</label>
+                </div>
+                <br> 
+                <button id="buttonlogin" type="submit">Join</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
