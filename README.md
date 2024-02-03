@@ -5,7 +5,6 @@ This repository contains my first web project submitted for the university cours
 ## Project Details:
 
 - **Languages Used:** HTML, CSS, JavaScript, PHP
-- **Project Directory:** `PROJECT/`
 
 ## Description:
 
